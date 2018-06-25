@@ -1,0 +1,7 @@
+Docker cotnainer for building Replicant 6.0
+
+Create container:
+docker build -t "tcreplicant6" .
+
+Enter container shell with current uid and gid and expose current directory
+docker run -i -t -v "$PWD:/src" tcreplicant6 $(id -u) $(id -g)
